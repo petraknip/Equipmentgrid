@@ -1,0 +1,1 @@
+﻿.gridContainer{width:90vw;padding:20px;height:90vh;}.gridContainer .grid{display:grid;width:100%;grid-template-columns:repeat(6,1fr);grid-auto-rows:1rem,auto;}.gridContainer h1{background-color:#a9a9a9;height:2rem;}

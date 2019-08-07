@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/less/patterns/pages/equipment.css",
+    "inputFile": "wwwroot/less/patterns/pages/equipment.less"
+  },
+  {
+    "outputFile": "wwwroot/less/patterns/pages/flextest.css",
+    "inputFile": "wwwroot/less/patterns/pages/flextest.less"
+  },
+  {
+    "outputFile": "wwwroot/less/index.css",
+    "inputFile": "wwwroot/less/index.less"
+  }
+]

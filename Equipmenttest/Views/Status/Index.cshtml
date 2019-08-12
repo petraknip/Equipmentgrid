@@ -4,25 +4,84 @@
 }
 
 
-
-
-<div class="roomContainer">
+<div class="outercontainer">
+    <h1>Room</h1>
     @foreach (var room in Model)
     {
+        @*<h1>@room.Key</h1>*@
 
-        <h1>@room.Key</h1>
+
+        <div class="roomContainer">
 
 
-        @foreach (var deviceType in room.Value)
-        {
-            <h3>@deviceType.Key</h3>
 
-        }
+
+
+
+            @foreach (var deviceType in room.Value)
+            {
+                <div class="grid-item">
+
+                    @for (var i = 0; i < deviceType.Value.Count; i += 10)
+                    {
+                        var chunk = deviceType.Value.Values.Skip(i).Take(10);
+
+
+
+                        <h3>@deviceType.Key</h3>
+                        @foreach (var device in chunk)
+                        {
+                            <div>
+                                @device
+                            </div>
+                        }
+                    }
+                </div>
+
+
+
+
+
+
+            }
+
+        </div>
     }
 </div>
 
 
 
+
+@*<div class="outercontainer">
+        @foreach (var room in Model)
+        {
+            <div class="roomContainer">
+                <h1>@room.Key</h1>
+
+
+                @foreach (var deviceType in room.Value)
+                {
+                    <div class="innercontainer">
+                        <h3>@deviceType.Key</h3>
+
+                        <ul class="gridlist">
+                            @foreach (var device in deviceType.Value)
+                            {
+                                <li>
+                                    @device
+                                </li>
+                            }
+                        </ul>
+
+                    </div>
+
+
+
+                }
+
+            </div>
+        }
+    </div>*@
 
 @*OUDE CODE HIERONDER*@
 
